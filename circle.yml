@@ -1,4 +1,0 @@
-# circle.yml
-machine: # 虛擬機的環境
-  node:
-    version: 6.9.2 #把剛剛得到的node version填到這裡
