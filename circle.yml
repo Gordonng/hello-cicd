@@ -1,3 +1,4 @@
+# circle.yml
 machine: # 虛擬機的環境
   node:
     version: v10.19.0 #把剛剛得到的node version填到這裡
