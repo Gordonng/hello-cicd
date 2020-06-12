@@ -4,3 +4,9 @@ machine: # 虛擬機的環境
     version: 10.19.0 #把剛剛得到的node version填到這裡
   test:
     - npm test  #每一個deploy到github上的commit都會執行npm test
+deployment: #部屬的環境
+  develop:
+    branch: /^(?!master$).*$/ #表示任何一個branch被觸發時都執行commands
+    commands:
+      - eb use env-dev --profile default #將eb切換到「env-dev」環境
+      - eb deploy --profile default #把程式deploy上「env-dev」
